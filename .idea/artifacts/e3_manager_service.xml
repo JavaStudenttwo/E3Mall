@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="e3-manager-service">
+    <output-path>$PROJECT_DIR$/out/artifacts/e3_manager_service</output-path>
+    <root id="root">
+      <element id="module-output" name="e3-manager-dao" />
+      <element id="module-output" name="e3-manager-interface" />
+      <element id="module-output" name="e3-manager-pojo" />
+      <element id="module-output" name="e3-manager-service" />
+    </root>
+  </artifact>
+</component>
