@@ -11,26 +11,47 @@ import cn.e3mall.common.pojo.EasyUIDataGridResult;
 import cn.e3mall.pojo.TbItem;
 import cn.e3mall.service.ItemService;
 
-/**
- * 商品管理Controller
- * <p>Title: ItemController</p>
- * <p>Description: </p>
- * <p>Company: www.itcast.cn</p> 
- * @version 1.0
+import javax.annotation.Resource;
+
+/** 
+ * @Date 2017/12/17 18:51
+ * @Author CycloneKid sk18810356@gmail.com 
+ * @PackageName: cn.e3mall.controller
+ * @ClassName: ItemController 
+ * @Description: 
+ *
  */
 @Controller
 public class ItemController {
 
 	@Autowired
 	private ItemService itemService;
-	
+
+	/**
+	 * @Date 2017/12/17 18:51
+	 * @Author CycloneKid sk18810356@gmail.com 
+	 * @MethodName: getItemById
+	 * @Params: [itemId]
+	 * @ReturnType: cn.e3mall.pojo.TbItem
+	 * @Description:
+	 *
+	 */
 	@RequestMapping("/item/{itemId}")
 	@ResponseBody
 	public TbItem getItemById(@PathVariable Long itemId) {
 		TbItem tbItem = itemService.getItemById(itemId);
 		return tbItem;
 	}
-	
+
+	/**
+	 * @Date 2017/12/17 18:52
+	 * @Author CycloneKid sk18810356@gmail.com 
+	 * @MethodName: getItmeList
+	 * @Params: [page, rows]
+	 * @ReturnType: cn.e3mall.common.pojo.EasyUIDataGridResult
+	 * @Description:
+	 *
+	 */
 	@RequestMapping("/item/list")
 	@ResponseBody
 	public EasyUIDataGridResult getItmeList(Integer page,Integer rows) {

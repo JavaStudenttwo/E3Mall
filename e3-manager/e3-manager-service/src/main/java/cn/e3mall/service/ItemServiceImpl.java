@@ -15,28 +15,37 @@ import cn.e3mall.pojo.TbItemExample;
 import cn.e3mall.pojo.TbItemExample.Criteria;
 import cn.e3mall.service.ItemService;
 
-/**
- * 商品管理Service
- * <p>Title: ItemServiceImpl</p>
- * <p>Description: </p>
- * <p>Company: www.itcast.cn</p> 
- * @version 1.0
+/** 
+ * @Date 2017/12/17 18:52
+ * @Author CycloneKid sk18810356@gmail.com 
+ * @PackageName: cn.e3mall.service
+ * @ClassName: ItemServiceImpl 
+ * @Description: 
+ *
  */
 @Service
 public class ItemServiceImpl implements ItemService {
 
 	@Autowired
 	private TbItemMapper itemMapper;
-	
+
+	/**
+	 * @Date 2017/12/17 18:52
+	 * @Author CycloneKid sk18810356@gmail.com 
+	 * @MethodName: getItemById
+	 * @Params: [itemId]
+	 * @ReturnType: cn.e3mall.pojo.TbItem
+	 * @Description:
+	 *
+	 */
 	@Override
 	public TbItem getItemById(long itemId) {
-		//根据主键查询
-		//TbItem tbItem = itemMapper.selectByPrimaryKey(itemId);
+
 		TbItemExample example = new TbItemExample();
 		Criteria criteria = example.createCriteria();
-		//设置查询条件
+
 		criteria.andIdEqualTo(itemId);
-		//执行查询
+
 		List<TbItem> list = itemMapper.selectByExample(example);
 		if (list != null && list.size() > 0) {
 			return list.get(0);
@@ -44,9 +53,18 @@ public class ItemServiceImpl implements ItemService {
 		return null;
 	}
 
+	/**
+	 * @Date 2017/12/19 23:01
+	 * @Author CycloneKid sk18810356@gmail.com
+	 * @MethodName: getItemList
+	 * @Params: [page, rows]
+	 * @ReturnType: cn.e3mall.common.pojo.EasyUIDataGridResult
+	 * @Description:
+	 *
+	 */
 	@Override
 	public EasyUIDataGridResult getItemList(int page, int rows) {
-		
+
 		PageHelper.startPage(page, rows);
 		
 		TbItemExample example =  new TbItemExample();

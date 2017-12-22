@@ -17,10 +17,11 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 	<!-- 配置资源映射 -->
-	<mvc:resources location="/css/" mapping="/css/**"/>
-	<mvc:resources location="/js/" mapping="/js/**"/>
+	<mvc:resources location="css/" mapping="/css/**"/>
+	<mvc:resources location="js/" mapping="/js/**"/>
 	<!-- 引用dubbo服务 -->
 	<dubbo:application name="e3-manager-web"/>
-	<dubbo:registry protocol="zookeeper" address="192.168.2.250:2182"/>	
+	<dubbo:registry protocol="zookeeper" address="192.168.2.129:2182"/>
 	<dubbo:reference interface="cn.e3mall.service.ItemService" id="itemService" />
+	<dubbo:reference interface="cn.e3mall.service.ItemCatService" id="itemCatService" />
 </beans>
