@@ -6,11 +6,6 @@
 	<display-name>e3-manager-web</display-name>
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
-		<welcome-file>index.htm</welcome-file>
-		<welcome-file>index.jsp</welcome-file>
-		<welcome-file>default.html</welcome-file>
-		<welcome-file>default.htm</welcome-file>
-		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
 
 	<!-- 解决post乱码 -->
@@ -30,7 +25,7 @@
 
 	<!-- springmvc的前端控制器 -->
 	<servlet>
-		<servlet-name>e3-manager-web</servlet-name>
+		<servlet-name>e3-portal-web</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<!-- contextConfigLocation不是必须的， 如果不配置contextConfigLocation， springmvc的配置文件默认在：WEB-INF/servlet的name+"-servlet.xml" -->
 		<init-param>
@@ -40,7 +35,7 @@
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>e3-manager-web</servlet-name>
-		<url-pattern>/</url-pattern>
+		<servlet-name>e3-portal-web</servlet-name>
+		<url-pattern>*.html</url-pattern>
 	</servlet-mapping>
 </web-app>
