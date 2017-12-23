@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/e3-content/e3-content-service" />
+    <file type="web" url="file://$PROJECT_DIR$/e3-gateway-web" />
+    <file type="web" url="file://$PROJECT_DIR$/e3-gateway/e3-gateway-service" />
     <file type="web" url="file://$PROJECT_DIR$/e3-manager-web" />
     <file type="web" url="file://$PROJECT_DIR$/e3-manager/e3-manager-service" />
     <file type="web" url="file://$PROJECT_DIR$/e3-portal-web" />
+    <file type="web" url="file://$PROJECT_DIR$/e3-portal/e3-portal-service" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -13,7 +17,12 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/e3-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/e3-manager/pom.xml" />
+        <option value="$PROJECT_DIR$/e3-portal-service/pom.xml" />
+        <option value="$PROJECT_DIR$/e3-portal-web/pom.xml" />
+        <option value="$PROJECT_DIR$/e3-portal/e3-portal-interface/pom.xml" />
+        <option value="$PROJECT_DIR$/e3-portal/pom.xml" />
       </set>
     </option>
   </component>

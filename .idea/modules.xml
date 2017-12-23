@@ -3,6 +3,13 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/e3-common/e3-common.iml" filepath="$PROJECT_DIR$/e3-common/e3-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/e3-content/e3-content.iml" filepath="$PROJECT_DIR$/e3-content/e3-content.iml" />
+      <module fileurl="file://$PROJECT_DIR$/e3-content/e3-content-interface/e3-content-interface.iml" filepath="$PROJECT_DIR$/e3-content/e3-content-interface/e3-content-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/e3-content/e3-content-service/e3-content-service.iml" filepath="$PROJECT_DIR$/e3-content/e3-content-service/e3-content-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/e3-gateway/e3-gateway.iml" filepath="$PROJECT_DIR$/e3-gateway/e3-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/e3-gateway/e3-gateway-interface/e3-gateway-interface.iml" filepath="$PROJECT_DIR$/e3-gateway/e3-gateway-interface/e3-gateway-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/e3-gateway/e3-gateway-service/e3-gateway-service.iml" filepath="$PROJECT_DIR$/e3-gateway/e3-gateway-service/e3-gateway-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/e3-gateway-web/e3-gateway-web.iml" filepath="$PROJECT_DIR$/e3-gateway-web/e3-gateway-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/e3-manager/e3-manager.iml" filepath="$PROJECT_DIR$/e3-manager/e3-manager.iml" />
       <module fileurl="file://$PROJECT_DIR$/e3-manager/e3-manager-dao/e3-manager-dao.iml" filepath="$PROJECT_DIR$/e3-manager/e3-manager-dao/e3-manager-dao.iml" />
       <module fileurl="file://$PROJECT_DIR$/e3-manager/e3-manager-interface/e3-manager-interface.iml" filepath="$PROJECT_DIR$/e3-manager/e3-manager-interface/e3-manager-interface.iml" />
@@ -10,7 +17,6 @@
       <module fileurl="file://$PROJECT_DIR$/e3-manager/e3-manager-service/e3-manager-service.iml" filepath="$PROJECT_DIR$/e3-manager/e3-manager-service/e3-manager-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/e3-manager-web/e3-manager-web.iml" filepath="$PROJECT_DIR$/e3-manager-web/e3-manager-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/e3-parent.iml" filepath="$PROJECT_DIR$/e3-parent.iml" />
-      <module fileurl="file://$PROJECT_DIR$/e3-portal-web/e3-portal-web.iml" filepath="$PROJECT_DIR$/e3-portal-web/e3-portal-web.iml" />
     </modules>
   </component>
 </project>
