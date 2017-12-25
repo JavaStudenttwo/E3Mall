@@ -19,10 +19,6 @@
       <set>
         <option value="$PROJECT_DIR$/e3-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/e3-manager/pom.xml" />
-        <option value="$PROJECT_DIR$/e3-portal-service/pom.xml" />
-        <option value="$PROJECT_DIR$/e3-portal-web/pom.xml" />
-        <option value="$PROJECT_DIR$/e3-portal/e3-portal-interface/pom.xml" />
-        <option value="$PROJECT_DIR$/e3-portal/pom.xml" />
       </set>
     </option>
   </component>
