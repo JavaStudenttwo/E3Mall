@@ -26,7 +26,7 @@ function _4(_6){
 var _7=[];
 _6.addClass("menu");
 _7.push(_6);
-if(!_6.hasClass("menu-content")){
+if(!_6.hasClass("menu-service")){
 _6.children("div").each(function(){
 var _8=$(this).children("div");
 if(_8.length){
@@ -42,7 +42,7 @@ return _7;
 function _5(_9){
 var wh=$.parser.parseOptions(_9[0],["width","height"]);
 _9[0].originalHeight=wh.height||0;
-if(_9.hasClass("menu-content")){
+if(_9.hasClass("menu-service")){
 _9[0].originalWidth=wh.width||_9._outerWidth();
 }else{
 _9[0].originalWidth=wh.width||0;

@@ -246,7 +246,7 @@ K.options = {
 	dialogAlignType : 'page',
 	useContextmenu : true,
 	fullscreenShortcut : false,
-	bodyClass : 'ke-content',
+	bodyClass : 'ke-service',
 	indentChar : '\t',
 	cssPath : '',
 	cssData : '',
@@ -4256,7 +4256,7 @@ _extend(KDialog, KWidget, {
 		self.div.addClass('ke-dialog').bind('click,mousedown', function(e){
 			e.stopPropagation();
 		});
-		var contentDiv = K('<div class="ke-dialog-content"></div>').appendTo(self.div);
+		var contentDiv = K('<div class="ke-dialog-service"></div>').appendTo(self.div);
 		if (_IE && _V < 7) {
 			self.iframeMask = K('<iframe src="about:blank" class="ke-dialog-shadow"></iframe>').appendTo(self.div);
 		} else if (shadowMode) {
@@ -4321,7 +4321,7 @@ _extend(KDialog, KWidget, {
 	showLoading : function(msg) {
 		msg = _undef(msg, '');
 		var self = this, body = self.bodyDiv;
-		self.loading = K('<div class="ke-dialog-loading"><div class="ke-inline-block ke-dialog-loading-content" style="margin-top:' + Math.round(body.height() / 3) + 'px;">' + msg + '</div></div>')
+		self.loading = K('<div class="ke-dialog-loading"><div class="ke-inline-block ke-dialog-loading-service" style="margin-top:' + Math.round(body.height() / 3) + 'px;">' + msg + '</div></div>')
 			.width(body.width()).height(body.height())
 			.css('top', self.headerDiv.height() + 'px');
 		body.css('visibility', 'hidden').after(self.loading);
@@ -7587,7 +7587,7 @@ KindEditor.plugin('map', function(K) {
 			searchBtn = K('[name="searchBtn"]', div),
 			win, doc;
 		var iframeHtml = ['<!doctype html><html><head>',
-			'<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />',
+			'<meta name="viewport" service="initial-scale=1.0, user-scalable=no" />',
 			'<style>',
 			'	html { height: 100% }',
 			'	body { height: 100%; margin: 0; padding: 0; background-color: #FFF }',

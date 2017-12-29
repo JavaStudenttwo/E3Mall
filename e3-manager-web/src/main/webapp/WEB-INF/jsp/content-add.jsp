@@ -53,7 +53,7 @@
 <script type="text/javascript">
 	var contentAddEditor ;
 	$(function(){
-		contentAddEditor = E3.createEditor("#contentAddForm [name=content]");
+		contentAddEditor = E3.createEditor("#contentAddForm [name=service]");
 		E3.initOnePicUpload();
 		$("#contentAddForm [name=categoryId]").val($("#contentCategoryTree").tree("getSelected").id);
 	});
@@ -66,7 +66,7 @@
 				}
 				contentAddEditor.sync();
 				
-				$.post("/content/save",$("#contentAddForm").serialize(), function(data){
+				$.post("/service/save",$("#contentAddForm").serialize(), function(data){
 					if(data.status == 200){
 						$.messager.alert('提示','新增内容成功!');
     					$("#contentList").datagrid("reload");

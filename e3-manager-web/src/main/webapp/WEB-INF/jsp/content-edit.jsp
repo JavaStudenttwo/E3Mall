@@ -54,7 +54,7 @@
 <script type="text/javascript">
 var contentEditEditor ;
 $(function(){
-	contentEditEditor = E3.createEditor("#contentEditForm [name=content]");
+	contentEditEditor = E3.createEditor("#contentEditForm [name=service]");
 	E3.initOnePicUpload();
 });
 
@@ -66,7 +66,7 @@ var contentEditPage = {
 			}
 			contentEditEditor.sync();
 			
-			$.post("/rest/content/edit",$("#contentEditForm").serialize(), function(data){
+			$.post("/rest/service/edit",$("#contentEditForm").serialize(), function(data){
 				if(data.status == 200){
 					$.messager.alert('提示','新增内容成功!');
 					$("#contentList").datagrid("reload");

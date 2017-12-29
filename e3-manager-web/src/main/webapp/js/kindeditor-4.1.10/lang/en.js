@@ -223,7 +223,7 @@ KindEditor.lang({
 		{'3' : 'Line height 3'}
 	],
 	'template.selectTemplate' : 'Template',
-	'template.replaceContent' : 'Replace current content',
+	'template.replaceContent' : 'Replace current service',
 	'template.fileList' : {
 		'1.html' : 'Image and Text',
 		'2.html' : 'Table',

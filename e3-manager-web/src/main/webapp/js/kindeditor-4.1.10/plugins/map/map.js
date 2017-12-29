@@ -58,7 +58,7 @@ KindEditor.plugin('map', function(K) {
 			searchBtn = K('[name="searchBtn"]', div),
 			win, doc;
 		var iframeHtml = ['<!doctype html><html><head>',
-			'<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />',
+			'<meta name="viewport" service="initial-scale=1.0, user-scalable=no" />',
 			'<style>',
 			'	html { height: 100% }',
 			'	body { height: 100%; margin: 0; padding: 0; background-color: #FFF }',

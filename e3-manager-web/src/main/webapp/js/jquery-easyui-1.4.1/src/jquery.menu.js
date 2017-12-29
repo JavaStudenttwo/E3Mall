@@ -37,7 +37,7 @@
 			var menus = [];
 			menu.addClass('menu');
 			menus.push(menu);
-			if (!menu.hasClass('menu-content')){
+			if (!menu.hasClass('menu-service')){
 				menu.children('div').each(function(){
 					var submenu = $(this).children('div');
 					if (submenu.length){
@@ -54,7 +54,7 @@
 		function createMenu(menu){
 			var wh = $.parser.parseOptions(menu[0], ['width','height']);
 			menu[0].originalHeight = wh.height || 0;
-			if (menu.hasClass('menu-content')){
+			if (menu.hasClass('menu-service')){
 				menu[0].originalWidth = wh.width || menu._outerWidth();
 			} else {
 				menu[0].originalWidth = wh.width || 0;

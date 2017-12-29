@@ -4,9 +4,28 @@ import cn.e3mall.common.utils.FastDFSClient;
 import org.csource.fastdfs.*;
 import org.junit.Test;
 
+/**
+ * @Date 2017/12/29 22:00
+ * @Author CycloneKid sk18810356@gmail.com
+ * @PackageName: cn.e3mall.controller
+ * @ClassName: FastDFSTest
+ * @Description: 文件上传服务器测试
+ *
+ */
 public class FastDFSTest {
 
+    /**
+     * @Date 2017/12/29 22:01
+     * @Author CycloneKid sk18810356@gmail.com
+     * @MethodName: testFileUpload
+     * @Params: []
+     * @ReturnType: void
+     * @Description: 测试方法，文件上传
+     *
+     */
+    @Test
     public void testFileUpload() throws Exception {
+
         // 1、加载配置文件，配置文件中的内容就是tracker服务的地址。
         ClientGlobal.init("E:\\编程学习区\\工作空间\\IdeaWorkplace\\IdeaProjects\\e3-parent\\e3-manager-web\\src\\main\\resources\\conf\\client.conf");
         // 2、创建一个TrackerClient对象。直接new一个。
@@ -26,6 +45,7 @@ public class FastDFSTest {
     }
 
 
+    @Test
     public void testFastDfsClient() throws Exception {
         FastDFSClient fastDFSClient = new FastDFSClient("D:/workspaces-itcast/e3-manager-web/src/main/resources/resource/client.conf");
         String file = fastDFSClient.uploadFile("D:/Documents/Pictures/images/2f2eb938943d.jpg");

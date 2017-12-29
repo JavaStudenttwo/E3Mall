@@ -769,7 +769,7 @@ var SFbest = {};
 			$("BODY").append(
 			  '<div id="popup_container" class="window">' +
 			    '<div class="titlehead"><h3 id="popup_title"></h3></div>' +
-			    '<div id="popup_content" class="content">' +
+			    '<div id="popup_content" class="service">' +
 			      '<div id="popup_message"></div>' +
 				'</div>' +
 			  '</div>');
