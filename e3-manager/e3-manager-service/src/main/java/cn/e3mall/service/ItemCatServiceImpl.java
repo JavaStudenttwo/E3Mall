@@ -24,13 +24,16 @@ public class ItemCatServiceImpl implements ItemCatService{
 
     @Autowired
     TbItemCatMapper tbItemCatMapper;
+
+    private String state = "open";
+
     /**
      * @Date 2017/12/21 19:21
      * @Author CycloneKid sk18810356@gmail.com
      * @MethodName: getTbItemCat
      * @Params: []
      * @ReturnType: cn.e3mall.pojo.TbItemCat
-     * @Description:
+     * @Description: 查询商品种类
      *
      */
     public List<EasyUITreeResult> getTbItemCat(long parentId){
@@ -47,7 +50,12 @@ public class ItemCatServiceImpl implements ItemCatService{
             EasyUITreeResult easyUITreeResult = new EasyUITreeResult();
             easyUITreeResult.setId(tbItemCat.getId());
             easyUITreeResult.setText(tbItemCat.getName());
-            easyUITreeResult.setStatus(tbItemCat.getIsParent()?"close":"open");
+
+            if (tbItemCat.getIsParent()){
+                this.state = "closed";
+            }
+            easyUITreeResult.setState(state);
+
             result.add(easyUITreeResult);
         }
 
