@@ -17,6 +17,7 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/e3-gateway-web/pom.xml" />
         <option value="$PROJECT_DIR$/e3-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/e3-manager/pom.xml" />
       </set>

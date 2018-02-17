@@ -1,11 +1,7 @@
 package cn.e3mall.common.utils;
 
 import org.csource.common.NameValuePair;
-import org.csource.fastdfs.ClientGlobal;
-import org.csource.fastdfs.StorageClient1;
-import org.csource.fastdfs.StorageServer;
-import org.csource.fastdfs.TrackerClient;
-import org.csource.fastdfs.TrackerServer;
+import org.csource.fastdfs.*;
 
 /**
  * @Date 2017/12/23 16:42
@@ -16,6 +12,23 @@ import org.csource.fastdfs.TrackerServer;
  *
  */
 public class FastDFSClient {
+
+/**
+	// 1、加载配置文件，配置文件中的内容就是tracker服务的地址。
+    ClientGlobal.init("E:\\编程学习区\\工作空间\\IdeaWorkplace\\IdeaProjects\\e3-parent\\e3-manager-web\\src\\main\\resources\\conf\\client.conf");
+	// 2、创建一个TrackerClient对象。直接new一个。
+	TrackerClient trackerClient = new TrackerClient();
+	// 3、使用TrackerClient对象创建连接，获得一个TrackerServer对象。
+	TrackerServer trackerServer = trackerClient.getConnection();
+	// 4、创建一个StorageServer的引用，值为null
+	StorageServer storageServer = null;
+	// 5、创建一个StorageClient对象，需要两个参数TrackerServer对象、StorageServer的引用
+	StorageClient storageClient = new StorageClient(trackerServer, storageServer);
+   //扩展名不带“.”
+	String[] strings =
+			storageClient.upload_file("E:\\下载文件\\新建文件夹\\Screenshot_2017-12-31-15-20-43.jpeg", "jpeg", null);
+
+*/
 
 	private TrackerClient trackerClient = null;
 	private TrackerServer trackerServer = null;
@@ -28,11 +41,12 @@ public class FastDFSClient {
 	 * @MethodName: FastDFSClient
 	 * @Params: [conf]
 	 * @ReturnType:
-	 * @Description: 构造方法
+	 * @Description: 构造方法，创建上传文件需要的工具类
 	 *
 	 */
 	public FastDFSClient(String conf) throws Exception {
 
+		/**修改配置文件路径名，将相对路径名由相对项目改为真实路径*/
 		if (conf.contains("classpath:")) {
 			conf = conf.replace("classpath:", this.getClass().getResource("/").getPath());
 		}

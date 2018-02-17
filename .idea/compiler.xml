@@ -9,9 +9,6 @@
         <module name="e3-common" />
         <module name="e3-content-interface" />
         <module name="e3-content-service" />
-        <module name="e3-gateway-interface" />
-        <module name="e3-gateway-service" />
-        <module name="e3-gateway-web" />
         <module name="e3-manager-dao" />
         <module name="e3-manager-interface" />
         <module name="e3-manager-pojo" />

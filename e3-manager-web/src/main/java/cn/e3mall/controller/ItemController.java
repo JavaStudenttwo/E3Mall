@@ -1,6 +1,7 @@
 package cn.e3mall.controller;
 
 
+import cn.e3mall.common.utils.E3Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -58,5 +59,22 @@ public class ItemController {
 		EasyUIDataGridResult result = itemService.getItemList(page , rows);
 		return result;
 	}
+
+	/**
+	 * @Date 2018/2/6 16:58
+	 * @Author CycloneKid sk18810356@gmail.com 
+	 * @MethodName: 
+	 * @Params: 
+	 * @ReturnType: 
+	 * @Description: 
+	 *
+	 */
+	@RequestMapping("/item/save")
+	@ResponseBody
+	public E3Result saveItem(TbItem item, String desc) {
+		E3Result e3Result = itemService.addItem(item, desc);
+		return e3Result;
+	}
+
 
 }

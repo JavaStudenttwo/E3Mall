@@ -104,14 +104,20 @@ var E3 = {
     
     // 初始化选择类目组件
     initItemCat : function(data){
+        /*  .each()函数
+        	以每一个匹配的元素作为上下文来执行一个函数。
+		 	意味着，每次执行传递进来的函数时，函数中的this关键字都指向一个不同的DOM元素（每次都是一个不同的匹配元素）。
+			而且，在每次执行函数时，都会给函数传递一个表示作为执行环境的元素在匹配的元素集合中所处位置的数字值作为参数（从零开始的整型）。
+			返回 'false' 将停止循环 (就像在普通的循环中使用 'break')。返回 'true' 跳至下一个循环(就像在普通的循环中使用'continue')。
+			*/
     	$(".selectItemCat").each(function(i,e){
     		var _ele = $(e);
     		if(data && data.cid){
     			_ele.after("<span style='margin-left:10px;'>"+data.cid+"</span>");
-    		}else{
-    			_ele.after("<span style='margin-left:10px;'></span>");
-    		}
-    		_ele.unbind('click').click(function(){
+            }else{
+                _ele.after("<span style='margin-left:10px;'></span>");
+            }
+            _ele.unbind('click').click(function(){
     			$("<div>").css({padding:"5px"}).html("<ul>")
     			.window({
     				width:'500',

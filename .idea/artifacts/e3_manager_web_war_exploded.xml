@@ -13,7 +13,9 @@
           <element id="archive" name="e3-manager-interface-1.0-SNAPSHOT.jar">
             <element id="module-output" name="e3-manager-interface" />
           </element>
-          <element id="library" level="project" name="Maven: cn.e3mall:e3-manager-pojo:0.0.1-SNAPSHOT" />
+          <element id="archive" name="e3-manager-pojo-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="e3-manager-pojo" />
+          </element>
           <element id="library" level="project" name="Maven: org.springframework:spring-context:4.2.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-aop:4.2.4.RELEASE" />
           <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />

@@ -1,7 +1,12 @@
 package cn.e3mall.service;
 
+import java.util.Date;
 import java.util.List;
 
+import cn.e3mall.common.utils.E3Result;
+import cn.e3mall.common.utils.IDUtils;
+import cn.e3mall.mapper.TbItemDescMapper;
+import cn.e3mall.pojo.TbItemDesc;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -28,6 +33,8 @@ public class ItemServiceImpl implements ItemService {
 
 	@Autowired
 	private TbItemMapper itemMapper;
+	@Autowired
+	private TbItemDescMapper itemDescMapper;
 
 	/**
 	 * @Date 2017/12/17 18:52
@@ -79,8 +86,37 @@ public class ItemServiceImpl implements ItemService {
 		return result;
 	}
 
-	
+	/**
+	 * @Date 2018/2/6 17:06
+	 * @Author CycloneKid sk18810356@gmail.com 
+	 * @MethodName: 
+	 * @Params: 
+	 * @ReturnType: 
+	 * @Description: 
+	 *
+	 */
+	@Override
+	public E3Result addItem(TbItem item, String desc) {
+		/**商品信息初始化*/
+		long itemId = IDUtils.genItemId();
+		item.setId(itemId);
+		/**商品状态：1.正常 2.下架 3.删除*/
+		item.setStatus((byte) 1);
+		Date date = new Date();
+		item.setCreated(date);
+		item.setUpdated(date);
+		itemMapper.insert(item);
 
+		/**商品描述初始化*/
+		TbItemDesc itemDesc = new TbItemDesc();
+		itemDesc.setItemId(itemId);
+		itemDesc.setItemDesc(desc);
+		itemDesc.setCreated(date);
+		itemDesc.setUpdated(date);
+		itemDescMapper.insert(itemDesc);
+		return E3Result.ok();
+
+	}
 
 
 }

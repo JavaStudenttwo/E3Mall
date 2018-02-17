@@ -37,7 +37,8 @@ public class FastDFSTest {
         // 5、创建一个StorageClient对象，需要两个参数TrackerServer对象、StorageServer的引用
         StorageClient storageClient = new StorageClient(trackerServer, storageServer);
         /**扩展名不带“.”*/
-        String[] strings = storageClient.upload_file("D:/Screenshot_2017-12-22-00-00-25.jpeg", "jpeg", null);
+        String[] strings =
+                storageClient.upload_file("E:\\下载文件\\新建文件夹\\Screenshot_2017-12-31-15-20-43.jpeg", "jpeg", null);
 
         for (String string : strings) {
             System.out.println(string);
@@ -45,12 +46,6 @@ public class FastDFSTest {
     }
 
 
-    @Test
-    public void testFastDfsClient() throws Exception {
-        FastDFSClient fastDFSClient = new FastDFSClient("D:/workspaces-itcast/e3-manager-web/src/main/resources/resource/client.conf");
-        String file = fastDFSClient.uploadFile("D:/Documents/Pictures/images/2f2eb938943d.jpg");
-        System.out.println(file);
-    }
 
 
 }

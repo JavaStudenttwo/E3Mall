@@ -7,14 +7,17 @@ import java.io.Serializable;
  * @Author CycloneKid sk18810356@gmail.com
  * @PackageName: cn.e3mall.common.pojo
  * @ClassName: EasyUITreeResult
- * @Description: 封装产品信息树数据
+ * @Description: 封装产品分类信息，树数据
  *
  */
 public class EasyUITreeResult implements Serializable{
 
+    /**分类id*/
     long id;
+    /**分类名称*/
     String text;
-    String status;
+    /**是否有子节点的标识，close表示有子节点，open表示没有子节点*/
+    String state;
 
     public long getId() {
         return id;
@@ -32,11 +35,11 @@ public class EasyUITreeResult implements Serializable{
         this.text = text;
     }
 
-    public String getStatus() {
-        return status;
+    public String getState() {
+        return state;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setState(String state) {
+        this.state = state;
     }
 }
