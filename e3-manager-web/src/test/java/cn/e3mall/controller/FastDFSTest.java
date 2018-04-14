@@ -23,7 +23,6 @@ public class FastDFSTest {
      * @Description: 测试方法，文件上传
      *
      */
-    @Test
     public void testFileUpload() throws Exception {
 
         // 1、加载配置文件，配置文件中的内容就是tracker服务的地址。

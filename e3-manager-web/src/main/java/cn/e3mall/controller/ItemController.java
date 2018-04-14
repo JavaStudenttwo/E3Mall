@@ -19,7 +19,7 @@ import javax.annotation.Resource;
  * @Author CycloneKid sk18810356@gmail.com 
  * @PackageName: cn.e3mall.controller
  * @ClassName: ItemController 
- * @Description: 
+ * @Description: 商品信息管理
  *
  */
 @Controller
@@ -75,6 +75,24 @@ public class ItemController {
 		E3Result e3Result = itemService.addItem(item, desc);
 		return e3Result;
 	}
+
+	/**
+	 * @Date 2018/2/18 23:09
+	 * @Author CycloneKid sk18810356@gmail.com
+	 * @MethodName: deleteItem
+	 * @Params: [item]
+	 * @ReturnType: cn.e3mall.common.utils.E3Result
+	 * @Description:
+	 *
+	 */
+	@RequestMapping("/rest/item/delete")
+	@ResponseBody
+	public E3Result deleteItem(String ids){
+		E3Result e3Result = itemService.deleteItem(ids);
+		return e3Result;
+	}
+
+
 
 
 }

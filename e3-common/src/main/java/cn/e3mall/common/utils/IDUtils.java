@@ -21,7 +21,7 @@ public class IDUtils {
      * @Description: 图片id生成方法
      *
      */
-    public static String genImageName() {
+    public static String getImageName() {
         long millis = System.currentTimeMillis();
         Random random = new Random();
         int end3 = random.nextInt(999);
@@ -39,7 +39,7 @@ public class IDUtils {
      * @Description: 商品id生成方法
      *
      */
-    public static long genItemId() {
+    public static long getItemId() {
         long millis = System.currentTimeMillis();
         Random random = new Random();
         int end2 = random.nextInt(99);

@@ -98,7 +98,7 @@ public class ItemServiceImpl implements ItemService {
 	@Override
 	public E3Result addItem(TbItem item, String desc) {
 		/**商品信息初始化*/
-		long itemId = IDUtils.genItemId();
+		long itemId = IDUtils.getItemId();
 		item.setId(itemId);
 		/**商品状态：1.正常 2.下架 3.删除*/
 		item.setStatus((byte) 1);
@@ -116,6 +116,23 @@ public class ItemServiceImpl implements ItemService {
 		itemDescMapper.insert(itemDesc);
 		return E3Result.ok();
 
+	}
+
+	/**
+	 * @Date 2018/2/18 23:11
+	 * @Author CycloneKid sk18810356@gmail.com
+	 * @MethodName: deleteItem
+	 * @Params: [item]
+	 * @ReturnType: cn.e3mall.common.utils.E3Result
+	 * @Description:
+	 *
+	 */
+	@Override
+	public E3Result deleteItem(String ids) {
+		String[] array = ids.split(",");
+
+		//itemMapper.deleteByExample();
+		return null;
 	}
 
 

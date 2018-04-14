@@ -16,7 +16,7 @@ import java.io.IOException;
  */
 public class ServicePublish {
 
-    @Test
+
     public void servicePublish() throws IOException {
         ApplicationContext applicationContext =
                 new ClassPathXmlApplicationContext("classpath:spring/applicationContext-*.xml");

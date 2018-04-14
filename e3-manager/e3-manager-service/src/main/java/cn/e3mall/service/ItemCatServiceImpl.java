@@ -25,8 +25,6 @@ public class ItemCatServiceImpl implements ItemCatService{
     @Autowired
     TbItemCatMapper tbItemCatMapper;
 
-    private String state = "open";
-
     /**
      * @Date 2017/12/21 19:21
      * @Author CycloneKid sk18810356@gmail.com
@@ -50,12 +48,7 @@ public class ItemCatServiceImpl implements ItemCatService{
             EasyUITreeResult easyUITreeResult = new EasyUITreeResult();
             easyUITreeResult.setId(tbItemCat.getId());
             easyUITreeResult.setText(tbItemCat.getName());
-
-            if (tbItemCat.getIsParent()){
-                this.state = "closed";
-            }
-            easyUITreeResult.setState(state);
-
+            easyUITreeResult.setState(tbItemCat.getIsParent()?"closed":"open");
             result.add(easyUITreeResult);
         }
 
