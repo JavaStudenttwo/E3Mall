@@ -88,8 +88,7 @@ public class ItemController {
 	@RequestMapping("/rest/item/delete")
 	@ResponseBody
 	public E3Result deleteItem(String ids){
-		E3Result e3Result = itemService.deleteItem(ids);
-		return e3Result;
+		return null;
 	}
 
 

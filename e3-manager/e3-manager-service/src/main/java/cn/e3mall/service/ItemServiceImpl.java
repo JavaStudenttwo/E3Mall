@@ -118,22 +118,5 @@ public class ItemServiceImpl implements ItemService {
 
 	}
 
-	/**
-	 * @Date 2018/2/18 23:11
-	 * @Author CycloneKid sk18810356@gmail.com
-	 * @MethodName: deleteItem
-	 * @Params: [item]
-	 * @ReturnType: cn.e3mall.common.utils.E3Result
-	 * @Description:
-	 *
-	 */
-	@Override
-	public E3Result deleteItem(String ids) {
-		String[] array = ids.split(",");
-
-		//itemMapper.deleteByExample();
-		return null;
-	}
-
 
 }

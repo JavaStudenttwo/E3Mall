@@ -15,6 +15,7 @@
         <module name="e3-manager-service" />
         <module name="e3-manager-web" />
         <module name="e3-portal-interface" />
+        <module name="e3-portal-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

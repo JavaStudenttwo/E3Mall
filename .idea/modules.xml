@@ -13,6 +13,7 @@
       <module fileurl="file://$PROJECT_DIR$/e3-manager/e3-manager-service/e3-manager-service.iml" filepath="$PROJECT_DIR$/e3-manager/e3-manager-service/e3-manager-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/e3-manager-web/e3-manager-web.iml" filepath="$PROJECT_DIR$/e3-manager-web/e3-manager-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/e3-parent.iml" filepath="$PROJECT_DIR$/e3-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/e3-portal-web/e3-portal-web.iml" filepath="$PROJECT_DIR$/e3-portal-web/e3-portal-web.iml" />
     </modules>
   </component>
 </project>
