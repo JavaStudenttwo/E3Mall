@@ -9,7 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <groupId>cn.e3mall</groupId>
     <artifactId>e3-common</artifactId>
+    <version>1.0-SNAPSHOT</version>
 
     <dependencies>
         <!-- 时间操作组件 -->
@@ -62,6 +64,11 @@
             <groupId>fastdfs_client</groupId>
             <artifactId>fastdfs_client</artifactId>
             <version>1.25</version>
+        </dependency>
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>2.7.2</version>
         </dependency>
     </dependencies>
 

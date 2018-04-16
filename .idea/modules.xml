@@ -14,6 +14,10 @@
       <module fileurl="file://$PROJECT_DIR$/e3-manager-web/e3-manager-web.iml" filepath="$PROJECT_DIR$/e3-manager-web/e3-manager-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/e3-parent.iml" filepath="$PROJECT_DIR$/e3-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/e3-portal-web/e3-portal-web.iml" filepath="$PROJECT_DIR$/e3-portal-web/e3-portal-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/e3-search/e3-search.iml" filepath="$PROJECT_DIR$/e3-search/e3-search.iml" />
+      <module fileurl="file://$PROJECT_DIR$/e3-search/e3-search-interface/e3-search-interface.iml" filepath="$PROJECT_DIR$/e3-search/e3-search-interface/e3-search-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/e3-search/e3-search-service/e3-search-service.iml" filepath="$PROJECT_DIR$/e3-search/e3-search-service/e3-search-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/e3-search-web/e3-search-web.iml" filepath="$PROJECT_DIR$/e3-search-web/e3-search-web.iml" />
     </modules>
   </component>
 </project>

@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Maven: cn.e3mall:e3-search-interface:1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/cn/e3mall/e3-search-interface/1.0-SNAPSHOT/e3-search-interface-1.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/e3-search/e3-search-interface/e3-search-interface-1.0-SNAPSHOT-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/cn/e3mall/e3-search-interface/1.0-SNAPSHOT/e3-search-interface-1.0-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/e3-search/e3-search-interface/e3-search-interface-1.0-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/cn/e3mall/e3-search-interface/1.0-SNAPSHOT/e3-search-interface-1.0-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -8,6 +8,8 @@
     <file type="web" url="file://$PROJECT_DIR$/e3-manager/e3-manager-service" />
     <file type="web" url="file://$PROJECT_DIR$/e3-portal-web" />
     <file type="web" url="file://$PROJECT_DIR$/e3-portal/e3-portal-service" />
+    <file type="web" url="file://$PROJECT_DIR$/e3-search-web" />
+    <file type="web" url="file://$PROJECT_DIR$/e3-search/e3-search-service" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -20,6 +22,8 @@
         <option value="$PROJECT_DIR$/e3-gateway-web/pom.xml" />
         <option value="$PROJECT_DIR$/e3-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/e3-manager/pom.xml" />
+        <option value="$PROJECT_DIR$/e3-search/e3-search-interface/pom.xml" />
+        <option value="$PROJECT_DIR$/e3-search/pom.xml" />
       </set>
     </option>
   </component>

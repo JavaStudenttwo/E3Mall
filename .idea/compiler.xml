@@ -16,6 +16,9 @@
         <module name="e3-manager-web" />
         <module name="e3-portal-interface" />
         <module name="e3-portal-web" />
+        <module name="e3-search-interface" />
+        <module name="e3-search-service" />
+        <module name="e3-search-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -39,6 +42,11 @@
       <module name="e3-portal-interface (1)" target="1.5" />
       <module name="e3-portal-service" target="1.7" />
       <module name="e3-portal-web" target="1.7" />
+      <module name="e3-search" target="1.7" />
+      <module name="e3-search-interface" target="1.7" />
+      <module name="e3-search-interface (1)" target="1.5" />
+      <module name="e3-search-service" target="1.7" />
+      <module name="e3-search-web" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>
