@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import cn.e3mall.common.pojo.EasyUITreeResult;
+import cn.e3mall.common.pojo.EasyUITreeNode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -29,7 +29,7 @@ public class ContentCategoryServiceImpl implements ContentCategoryService {
 	private TbContentCategoryMapper contentCategoryMapper;
 	
 	@Override
-	public List<EasyUITreeResult> getContentCatList(long parentId) {
+	public List<EasyUITreeNode> getContentCatList(long parentId) {
 		// 根据parentid查询子节点列表
 		TbContentCategoryExample example = new TbContentCategoryExample();
 		Criteria criteria = example.createCriteria();
@@ -38,9 +38,9 @@ public class ContentCategoryServiceImpl implements ContentCategoryService {
 		//执行查询
 		List<TbContentCategory> catList = contentCategoryMapper.selectByExample(example);
 		//转换成EasyUITreeResult的列表
-		List<EasyUITreeResult> nodeList = new ArrayList<>();
+		List<EasyUITreeNode> nodeList = new ArrayList<>();
 		for (TbContentCategory tbContentCategory : catList) {
-			EasyUITreeResult node = new EasyUITreeResult();
+			EasyUITreeNode node = new EasyUITreeNode();
 			node.setId(tbContentCategory.getId());
 			node.setText(tbContentCategory.getName());
 			node.setState(tbContentCategory.getIsParent()?"closed":"open");

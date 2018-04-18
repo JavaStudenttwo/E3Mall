@@ -17,7 +17,6 @@
         <module>e3-portal-web</module>
         <module>e3-search</module>
         <module>e3-search-web</module>
-        <module>e3-search</module>
     </modules>
 
     <properties>

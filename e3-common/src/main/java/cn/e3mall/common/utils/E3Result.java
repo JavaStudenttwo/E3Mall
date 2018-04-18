@@ -11,7 +11,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  * @Author CycloneKid sk18810356@gmail.com
  * @PackageName: cn.e3mall.common.utils
  * @ClassName: E3Result
- * @Description: 返回值
+ * @Description: 标准返回值对象，包含有响应信息
  *
  */
 public class E3Result implements Serializable{

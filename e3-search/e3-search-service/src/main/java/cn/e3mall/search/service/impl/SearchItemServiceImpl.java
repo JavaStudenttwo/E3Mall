@@ -17,7 +17,7 @@ import cn.e3mall.search.service.SearchItemService;
  * @Author CycloneKid sk18810356@gmail.com 
  * @PackageName: cn.e3mall.search.service.impl
  * @ClassName: SearchItemServiceImpl 
- * @Description: 
+ * @Description: solr的商品索引库管理
  *
  */
 @Service
@@ -25,31 +25,39 @@ public class SearchItemServiceImpl implements SearchItemService {
 
 	@Autowired
 	private ItemMapper itemMapper;
+	/** 这里使用spring/applicationContext-solr.xml文件中配置的SolrServer对象 */
 	@Autowired
 	private SolrServer solrServer;
-	
+
+	/**
+	 * @Date 2018/4/17 11:10
+	 * @Author CycloneKid sk18810356@gmail.com
+	 * @PackageName: cn.e3mall.search.service.impl
+	 * @ClassName: SearchItemServiceImpl
+	 * @Description:
+	 *
+	 */
 	@Override
 	public E3Result importAllItems() {
 		try {
-			//查询商品列表
+			/**从数据库中查出数据*/
 			List<SearchItem> itemList = itemMapper.getItemList();
 			//遍历商品列表
+			/**遍历查出的数据，并将其添加到solr索引库中*/
 			for (SearchItem searchItem : itemList) {
-				//创建文档对象
+
 				SolrInputDocument document = new SolrInputDocument();
-				//向文档对象中添加域
+
 				document.addField("id", searchItem.getId());
 				document.addField("item_title", searchItem.getTitle());
 				document.addField("item_sell_point", searchItem.getSell_point());
 				document.addField("item_price", searchItem.getPrice());
 				document.addField("item_image", searchItem.getImage());
 				document.addField("item_category_name", searchItem.getCategory_name());
-				//把文档对象写入索引库
+
 				solrServer.add(document);
 			}
-			//提交
 			solrServer.commit();
-			//返回导入成功
 			return E3Result.ok();
 		} catch (Exception e) {
 			e.printStackTrace();

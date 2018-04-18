@@ -22,8 +22,18 @@ public class SearchServiceImpl implements SearchService {
 	@Autowired
 	private SearchDao searchDao;
 
+	/**
+	 * @Date 2018/4/16 11:14
+	 * @Author CycloneKid sk18810356@gmail.com
+	 * @MethodName: search
+	 * @Params: [keyword, page, rows]
+	 * @ReturnType: cn.e3mall.common.pojo.SearchResult
+	 * @Description:
+	 *
+	 */
 	@Override
 	public SearchResult search(String keyword, int page, int rows) throws Exception {
+
 		//创建一个SolrQuery对象
 		SolrQuery query = new SolrQuery();
 		//设置查询条件

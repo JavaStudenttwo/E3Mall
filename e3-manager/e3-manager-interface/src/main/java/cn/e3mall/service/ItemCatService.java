@@ -1,10 +1,10 @@
 package cn.e3mall.service;
 
-import cn.e3mall.common.pojo.EasyUITreeResult;
+import cn.e3mall.common.pojo.EasyUITreeNode;
 
 import java.util.List;
 
 public interface ItemCatService {
 
-    List<EasyUITreeResult> getTbItemCat(long parentId);
+    List<EasyUITreeNode> getTbItemCat(long parentId);
 }

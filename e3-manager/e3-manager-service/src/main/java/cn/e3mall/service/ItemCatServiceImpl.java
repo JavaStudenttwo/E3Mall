@@ -1,9 +1,8 @@
 package cn.e3mall.service;
 
-import cn.e3mall.common.pojo.EasyUITreeResult;
+import cn.e3mall.common.pojo.EasyUITreeNode;
 import cn.e3mall.mapper.TbItemCatMapper;
 import cn.e3mall.pojo.TbItemCat;
-import cn.e3mall.pojo.TbItemCatExample;
 import cn.e3mall.pojo.TbItemCatExample;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -34,9 +33,9 @@ public class ItemCatServiceImpl implements ItemCatService{
      * @Description: 查询商品种类
      *
      */
-    public List<EasyUITreeResult> getTbItemCat(long parentId){
+    public List<EasyUITreeNode> getTbItemCat(long parentId){
 
-        List<EasyUITreeResult> result = new ArrayList<EasyUITreeResult>();
+        List<EasyUITreeNode> result = new ArrayList<EasyUITreeNode>();
 
         TbItemCatExample tbItemCatExample = new TbItemCatExample();
         TbItemCatExample.Criteria criteria = tbItemCatExample.createCriteria();
@@ -44,12 +43,14 @@ public class ItemCatServiceImpl implements ItemCatService{
         criteria.andParentIdEqualTo(parentId);
         List<TbItemCat> list = tbItemCatMapper.selectByExample(tbItemCatExample);
 
-        for (TbItemCat tbItemCat:list ){
-            EasyUITreeResult easyUITreeResult = new EasyUITreeResult();
-            easyUITreeResult.setId(tbItemCat.getId());
-            easyUITreeResult.setText(tbItemCat.getName());
-            easyUITreeResult.setState(tbItemCat.getIsParent()?"closed":"open");
-            result.add(easyUITreeResult);
+        for (TbItemCat tbItemCat : list) {
+
+            EasyUITreeNode node = new EasyUITreeNode();
+            node.setId(tbItemCat.getId());
+            node.setText(tbItemCat.getName());
+            node.setState(tbItemCat.getIsParent()?"closed":"open");
+            result.add(node);
+
         }
 
         return result;

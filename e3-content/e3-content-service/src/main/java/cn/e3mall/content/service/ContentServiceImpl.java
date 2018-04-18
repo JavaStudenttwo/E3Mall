@@ -13,21 +13,32 @@ import cn.e3mall.pojo.TbContent;
 import cn.e3mall.pojo.TbContentExample;
 import cn.e3mall.pojo.TbContentExample.Criteria;
 
-/**
- * 内容管理Service
- * <p>Title: ContentServiceImpl</p>
- * <p>Description: </p>
- * <p>Company: www.itcast.cn</p> 
- * @version 1.0
+/** 
+ * @Date 2018/4/17 23:14
+ * @Author CycloneKid sk18810356@gmail.com 
+ * @PackageName: cn.e3mall.content.service
+ * @ClassName: ContentServiceImpl 
+ * @Description: 
+ *
  */
 @Service
 public class ContentServiceImpl implements ContentService {
 
 	@Autowired
 	private TbContentMapper contentMapper;
-	
+
+	/**
+	 * @Date 2018/4/17 23:09
+	 * @Author CycloneKid sk18810356@gmail.com 
+	 * @MethodName: addContent
+	 * @Params: [content]
+	 * @ReturnType: cn.e3mall.common.utils.E3Result
+	 * @Description:
+	 *
+	 */
 	@Override
 	public E3Result addContent(TbContent content) {
+		
 		//将内容数据插入到内容表
 		content.setCreated(new Date());
 		content.setUpdated(new Date());
@@ -37,15 +48,17 @@ public class ContentServiceImpl implements ContentService {
 	}
 
 	/**
-	 * 根据内容分类id查询内容列表
-	 * <p>Title: getContentListByCid</p>
-	 * <p>Description: </p>
-	 * @param cid
-	 * @return
-	 * @see ContentService#getContentListByCid(long)
+	 * @Date 2018/4/17 23:09
+	 * @Author CycloneKid sk18810356@gmail.com 
+	 * @MethodName: getContentListByCid
+	 * @Params: [cid]
+	 * @ReturnType: java.util.List<cn.e3mall.pojo.TbContent>
+	 * @Description:
+	 *
 	 */
 	@Override
 	public List<TbContent> getContentListByCid(long cid) {
+		
 		TbContentExample example = new TbContentExample();
 		Criteria criteria = example.createCriteria();
 		//设置查询条件
