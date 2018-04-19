@@ -16,10 +16,10 @@
 	<!-- 使用dubbo发布服务 -->
 	<!-- 提供方应用信息，用于计算依赖关系 -->
 	<dubbo:application name="e3-manager" />
-	<dubbo:registry protocol="zookeeper" address="192.168.25.129:2182" />
-	<!-- 用dubbo协议在20880端口暴露服务 -->
+	<dubbo:registry protocol="zookeeper" address="192.168.25.129:2181" />
+
+	<!-- manager服务发布 -->
 	<dubbo:protocol name="dubbo" port="20880" />
-	<!-- 声明需要暴露的服务接口 -->
 	<dubbo:service interface="cn.e3mall.service.ItemService" ref="itemServiceImpl" timeout="600000"/>
 	<dubbo:service interface="cn.e3mall.service.ItemCatService" ref="itemCatServiceImpl" timeout="600000"/>
 </beans>

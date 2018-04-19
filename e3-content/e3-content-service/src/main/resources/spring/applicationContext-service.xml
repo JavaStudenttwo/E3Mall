@@ -10,16 +10,13 @@
 	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.2.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.2.xsd
 	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.2.xsd">
 
-	<!-- 配置包扫描器 -->
 	<context:component-scan base-package="cn.e3mall.content.service"/>
-	
-	<!-- 使用dubbo发布服务 -->
-	<!-- 提供方应用信息，用于计算依赖关系 -->
+
 	<dubbo:application name="e3-manager" />
 	<dubbo:registry protocol="zookeeper" address="192.168.25.129:2181" />
-	<!-- 用dubbo协议在20880端口暴露服务 -->
+
+	<!-- content服务发布 -->
 	<dubbo:protocol name="dubbo" port="20882" />
-	<!-- 声明需要暴露的服务接口 -->
 	<dubbo:service interface="cn.e3mall.content.service.ContentCategoryService" ref="contentCategoryServiceImpl" timeout="600000"/>
 	<dubbo:service interface="cn.e3mall.content.service.ContentService" ref="contentServiceImpl" timeout="600000"/>
 

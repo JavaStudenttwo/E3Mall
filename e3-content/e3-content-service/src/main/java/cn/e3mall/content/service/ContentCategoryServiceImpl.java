@@ -27,45 +27,68 @@ public class ContentCategoryServiceImpl implements ContentCategoryService {
 
 	@Autowired
 	private TbContentCategoryMapper contentCategoryMapper;
-	
+
+	/**
+	 * @Date 2018/4/19 15:38
+	 * @Author CycloneKid sk18810356@gmail.com
+	 * @MethodName: getContentCatList
+	 * @Params: [parentId]
+	 * @ReturnType: java.util.List<cn.e3mall.common.pojo.EasyUITreeNode>
+	 * @Description: 查询商品分类
+	 *
+	 */
 	@Override
 	public List<EasyUITreeNode> getContentCatList(long parentId) {
-		// 根据parentid查询子节点列表
+
+		/** 根据parentid查询子节点列表 */
 		TbContentCategoryExample example = new TbContentCategoryExample();
 		Criteria criteria = example.createCriteria();
-		//设置查询条件
+		/** 设置查询条件 */
 		criteria.andParentIdEqualTo(parentId);
-		//执行查询
+		/** 执行查询 */
 		List<TbContentCategory> catList = contentCategoryMapper.selectByExample(example);
-		//转换成EasyUITreeResult的列表
+
 		List<EasyUITreeNode> nodeList = new ArrayList<>();
+
 		for (TbContentCategory tbContentCategory : catList) {
+
 			EasyUITreeNode node = new EasyUITreeNode();
-			node.setId(tbContentCategory.getId());
 			node.setText(tbContentCategory.getName());
+			node.setId(tbContentCategory.getId());
 			node.setState(tbContentCategory.getIsParent()?"closed":"open");
-			//添加到列表
 			nodeList.add(node);
+
 		}
 		return nodeList;
 	}
 
+	/**
+	 * @Date 2018/4/19 15:42
+	 * @Author CycloneKid sk18810356@gmail.com
+	 * @MethodName: addContentCategory
+	 * @Params: [parentId, name]
+	 * @ReturnType: cn.e3mall.common.utils.E3Result
+	 * @Description: 添加商品分类
+	 *
+	 */
 	@Override
 	public E3Result addContentCategory(long parentId, String name) {
-		//创建一个tb_content_category表对应的pojo对象
+		/** 创建一个tb_content_category表对应的pojo对象 */
 		TbContentCategory contentCategory = new TbContentCategory();
-		//设置pojo的属性
+
 		contentCategory.setParentId(parentId);
 		contentCategory.setName(name);
-		//1(正常),2(删除)
+
 		contentCategory.setStatus(1);
-		//默认排序就是1
+
 		contentCategory.setSortOrder(1);
-		//新添加的节点一定是叶子节点
+
 		contentCategory.setIsParent(false);
+
 		contentCategory.setCreated(new Date());
 		contentCategory.setUpdated(new Date());
-		//插入到数据库
+
+		/** 添加到数据库 */
 		contentCategoryMapper.insert(contentCategory);
 		//判断父节点的isparent属性。如果不是true改为true
 		//根据parentid查询父节点

@@ -14,11 +14,11 @@ import cn.e3mall.common.utils.E3Result;
 import cn.e3mall.content.service.ContentCategoryService;
 
 /**
- * @Date 2018/4/17 23:09
+ * @Date 2018/4/19 16:13
  * @Author CycloneKid sk18810356@gmail.com
  * @PackageName: cn.e3mall.controller
  * @ClassName: ContentCatController
- * @Description:
+ * @Description: 商品内容分类管理
  *
  */
 @Controller
@@ -26,7 +26,16 @@ public class ContentCatController {
 
 	@Autowired
 	private ContentCategoryService contentCategoryService;
-	
+
+	/**
+	 * @Date 2018/4/19 16:14
+	 * @Author CycloneKid sk18810356@gmail.com
+	 * @MethodName: getContentCatList
+	 * @Params: [parentId]
+	 * @ReturnType: java.util.List<cn.e3mall.common.pojo.EasyUITreeNode>
+	 * @Description: 商品内容分类查询
+	 *
+	 */
 	@RequestMapping("/content/category/list")
 	@ResponseBody
 	public List<EasyUITreeNode> getContentCatList(
@@ -34,14 +43,19 @@ public class ContentCatController {
 		List<EasyUITreeNode> list = contentCategoryService.getContentCatList(parentId);
 		return list;
 	}
-	
+
 	/**
-	 * 添加分类节点
+	 * @Date 2018/4/19 16:14
+	 * @Author CycloneKid sk18810356@gmail.com
+	 * @MethodName: createContentCategory
+	 * @Params: [parentId, name]
+	 * @ReturnType: cn.e3mall.common.utils.E3Result
+	 * @Description: 商品内容分类添加
+	 *
 	 */
 	@RequestMapping(value="/content/category/create", method=RequestMethod.POST)
 	@ResponseBody
 	public E3Result createContentCategory(Long parentId, String name) {
-		//调用服务添加节点
 		E3Result e3Result = contentCategoryService.addContentCategory(parentId, name);
 		return e3Result;
 	}

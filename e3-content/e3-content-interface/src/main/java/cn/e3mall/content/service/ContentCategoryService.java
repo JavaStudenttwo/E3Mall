@@ -9,5 +9,6 @@ import cn.e3mall.common.utils.E3Result;
 public interface ContentCategoryService {
 
 	List<EasyUITreeNode> getContentCatList(long parentId);
+
 	E3Result addContentCategory(long parentId, String name);
 }

@@ -10,6 +10,7 @@
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
 
 	<context:component-scan base-package="cn.e3mall.controller" />
+
 	<mvc:annotation-driven />
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -29,8 +30,13 @@
 	</bean>
 	<!-- 引用dubbo服务 -->
 	<dubbo:application name="e3-manager-web"/>
-	<dubbo:registry protocol="zookeeper" address="192.168.25.129:2182"/>
+	<dubbo:registry protocol="zookeeper" address="192.168.25.129:2181"/>
+
 	<dubbo:reference interface="cn.e3mall.service.ItemService" id="itemService" />
 	<dubbo:reference interface="cn.e3mall.service.ItemCatService" id="itemCatService" />
+
 	<dubbo:reference interface="cn.e3mall.search.service.SearchItemService" id="searchItemService" />
+
+	<dubbo:reference interface="cn.e3mall.content.service.ContentCategoryService" id="contentCategoryService" />
+	<dubbo:reference interface="cn.e3mall.content.service.ContentService" id="contentService" />
 </beans>

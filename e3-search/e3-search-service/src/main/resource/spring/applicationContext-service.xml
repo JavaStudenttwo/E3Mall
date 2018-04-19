@@ -17,9 +17,9 @@
 	<!-- 提供方应用信息，用于计算依赖关系 -->
 	<dubbo:application name="e3-search" />
 	<dubbo:registry protocol="zookeeper" address="192.168.25.129:2181" />
-	<!-- 服务所在的端口号 -->
+
+	<!-- search服务发布 -->
 	<dubbo:protocol name="dubbo" port="20881" />
-	<!-- 声明需要暴露的服务接口 -->
 	<dubbo:service interface="cn.e3mall.search.service.SearchItemService" ref="searchItemServiceImpl" timeout="600000"/>
 	<dubbo:service interface="cn.e3mall.search.service.SearchService" ref="searchServiceImpl" timeout="600000"/>
 </beans>
