@@ -4,6 +4,8 @@ import cn.e3mall.common.pojo.EasyUIDataGridResult;
 import cn.e3mall.common.utils.E3Result;
 import cn.e3mall.pojo.TbItem;
 
+import java.util.List;
+
 public interface ItemService {
 
 	TbItem getItemById(long itemId);
@@ -12,4 +14,5 @@ public interface ItemService {
 
 	E3Result addItem(TbItem item, String desc);
 
+    E3Result importAllItems();
 }

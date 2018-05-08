@@ -33,6 +33,7 @@ public class ItemCatServiceImpl implements ItemCatService{
      * @Description: 查询商品种类
      *
      */
+    @Override
     public List<EasyUITreeNode> getTbItemCat(long parentId){
 
         List<EasyUITreeNode> result = new ArrayList<EasyUITreeNode>();

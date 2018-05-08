@@ -9,6 +9,7 @@ public class SearchItem implements Serializable{
 	private long price;
 	private String image;
 	private String category_name;
+
 	public String getId() {
 		return id;
 	}

@@ -25,7 +25,7 @@ import javax.annotation.Resource;
 @Controller
 public class ItemController {
 
-	@Autowired
+	@Resource(name = "itemService")
 	private ItemService itemService;
 
 	/**

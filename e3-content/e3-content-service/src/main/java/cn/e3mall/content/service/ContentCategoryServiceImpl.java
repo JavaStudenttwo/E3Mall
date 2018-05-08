@@ -73,32 +73,26 @@ public class ContentCategoryServiceImpl implements ContentCategoryService {
 	 */
 	@Override
 	public E3Result addContentCategory(long parentId, String name) {
-		/** 创建一个tb_content_category表对应的pojo对象 */
+		/** 商品分类pojo */
 		TbContentCategory contentCategory = new TbContentCategory();
 
 		contentCategory.setParentId(parentId);
 		contentCategory.setName(name);
-
 		contentCategory.setStatus(1);
-
 		contentCategory.setSortOrder(1);
-
 		contentCategory.setIsParent(false);
-
 		contentCategory.setCreated(new Date());
 		contentCategory.setUpdated(new Date());
 
 		/** 添加到数据库 */
 		contentCategoryMapper.insert(contentCategory);
-		//判断父节点的isparent属性。如果不是true改为true
-		//根据parentid查询父节点
+		/** 添加商品分类后，原来不是父节点的分类变为父节点，所以遍历所有parentId的分类，将其都改为父节点*/
 		TbContentCategory parent = contentCategoryMapper.selectByPrimaryKey(parentId);
 		if (!parent.getIsParent()) {
 			parent.setIsParent(true);
-			//更新到数数据库
 			contentCategoryMapper.updateByPrimaryKey(parent);
 		}
-		//返回结果，返回E3Result，包含pojo
+
 		return E3Result.ok(contentCategory);
 	}
 

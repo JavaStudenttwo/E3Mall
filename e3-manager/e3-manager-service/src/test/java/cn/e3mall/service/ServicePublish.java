@@ -16,12 +16,12 @@ import java.io.IOException;
  */
 public class ServicePublish {
 
-    @Test
-    public void servicePublish() throws IOException {
-        ApplicationContext applicationContext =
-                new ClassPathXmlApplicationContext("classpath:spring/applicationContext-*.xml");
-        System.out.println("服务发布");
-        System.in.read();
-        System.out.println("服务关闭");
-    }
+//    @Test
+//    public void servicePublish() throws IOException {
+//        ApplicationContext applicationContext =
+//                new ClassPathXmlApplicationContext("classpath:spring/applicationContext-*.xml");
+//        System.out.println("服务发布");
+//        System.in.read();
+//        System.out.println("服务关闭");
+//    }
 }

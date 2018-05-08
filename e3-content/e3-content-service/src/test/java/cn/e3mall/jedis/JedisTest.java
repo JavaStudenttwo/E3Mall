@@ -1,5 +1,6 @@
 package cn.e3mall.jedis;
 
+import cn.e3mall.common.jedis.JedisClientCluster;
 import cn.e3mall.content.service.JedisClient;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
@@ -32,7 +33,7 @@ public class JedisTest {
      * @Description: Jedis连接单机版Redis
      *
      */
-    //@Test
+    @Test
     public void testJedis() throws Exception {
         Jedis jedis = new Jedis("192.168.25.129", 6379);
         String result = jedis.get("a");
@@ -49,7 +50,7 @@ public class JedisTest {
      * @Description: 使用Jedis连接池连接单机版Redis
      *
      */
-    //@Test
+    @Test
     public void testJedisPool() throws Exception {
         JedisPool jedisPool = new JedisPool("192.168.25.129", 6379);
         Jedis jedis = jedisPool.getResource();
@@ -69,7 +70,7 @@ public class JedisTest {
      * @Description: 使用Jedis连接集群版Redis
      *
      */
-    //@Test
+    @Test
     public void testJedisCluster() throws Exception {
         Set<HostAndPort> nodes = new HashSet<>();
         nodes.add(new HostAndPort("192.168.25.129", 7001));
@@ -91,22 +92,19 @@ public class JedisTest {
      * @Author CycloneKid sk18810356@gmail.com
      * @PackageName: cn.e3mall.jedis
      * @ClassName: JedisTest
-     * @Description: 使用Spring容器
+     * @Description: 使用Spring容器中配置的Jedis集群
      *
      */
-    //@Test
+    @Test
     public void testJedisClient() throws Exception {
 
-        //初始化Spring容器
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring/applicationContext-redis.xml");
-        //从容器中获得JedisClient对象
-        JedisClient jedisClient = (JedisClient) applicationContext.getBean("jedisClientCluster");
-        jedisClient.set("Jedis", "first");
-        String result = jedisClient.get("Jedis");
+        JedisClientCluster jedisClientCluster = (JedisClientCluster) applicationContext.getBean("jedisClientCluster");
+        jedisClientCluster.set("Jedis", "first");
+        String result = jedisClientCluster.get("Jedis");
         System.out.println(result);
-
-
     }
+
 
 
 

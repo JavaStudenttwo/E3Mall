@@ -31,14 +31,17 @@ public class SearchDao {
 	private SolrServer solrServer;
 
 	/**
-	 *根据查询条件查询索引库
-	 * <p>Title: search</p>
-	 * <p>Description: </p>
-	 * @param query
-	 * @return
+	 * @Date 2018/5/7 16:04
+	 * @Author CycloneKid sk18810356@gmail.com
+	 * @MethodName: search
+	 * @Params: [query]
+	 * @ReturnType: cn.e3mall.common.pojo.SearchResult
+	 * @Description:
+	 *
 	 */
 	public SearchResult search(SolrQuery query) throws Exception {
-		//根据query查询索引库
+
+		/**查询索引库*/
 		QueryResponse queryResponse = solrServer.query(query);
 		//取查询结果。
 		SolrDocumentList solrDocumentList = queryResponse.getResults();
