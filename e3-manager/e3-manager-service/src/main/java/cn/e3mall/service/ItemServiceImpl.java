@@ -38,10 +38,10 @@ public class ItemServiceImpl implements ItemService {
 
 	@Autowired
 	private TbItemMapper itemMapper;
-	@Autowired
-	private TbItemDescMapper itemDescMapper;
-	@Autowired
-	private SolrServer solrServer;
+//	@Autowired
+//	private TbItemDescMapper itemDescMapper;
+//	@Autowired
+//	private SolrServer solrServer;
 
 	/**
 	 * @Date 2017/12/17 18:52
@@ -120,7 +120,7 @@ public class ItemServiceImpl implements ItemService {
 		itemDesc.setItemDesc(desc);
 		itemDesc.setCreated(date);
 		itemDesc.setUpdated(date);
-		itemDescMapper.insert(itemDesc);
+//		itemDescMapper.insert(itemDesc);
 		return E3Result.ok();
 
 	}
