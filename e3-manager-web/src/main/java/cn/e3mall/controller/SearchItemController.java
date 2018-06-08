@@ -1,14 +1,12 @@
 package cn.e3mall.controller;
 
+import cn.e3mall.search.service.SearchItemService;
 import cn.e3mall.service.ItemService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import cn.e3mall.common.utils.E3Result;
-import cn.e3mall.search.service.SearchItemService;
-
 import javax.annotation.Resource;
 
 
@@ -23,14 +21,13 @@ import javax.annotation.Resource;
 @Controller
 public class SearchItemController {
 
-	@Resource(name = "itemService")
-	private ItemService itemService;
+	@Resource(name = "searchItemService")
+	private SearchItemService searchItemService;
 
 	@RequestMapping("/index/item/import")
 	@ResponseBody
 	public E3Result importItemList() {
-		E3Result e3Result = itemService.importAllItems();
+		E3Result e3Result = searchItemService.importAllItems();
 		return e3Result;
-		
 	}
 }

@@ -13,10 +13,10 @@ public class TestItemMapper {
     @Resource(name = "itemMapper")
     private ItemMapper itemMapper;
 
-//    @Test
+    @Test
     public void testAdd(){
-//        List<SearchItem> itemList = itemMapper.getItemList();
-//        SearchItem searchItem = itemList.get(1);
-//        System.out.println(searchItem);
+        List<SearchItem> itemList = itemMapper.getItemList();
+        SearchItem searchItem = itemList.get(1);
+        System.out.println(searchItem);
     }
 }

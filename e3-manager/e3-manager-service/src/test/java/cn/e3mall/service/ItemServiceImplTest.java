@@ -22,12 +22,12 @@ import java.util.List;
 */ 
 public class ItemServiceImplTest {
 
-    @Autowired
+    //@Autowired
     private TbItemMapper itemMapper;
-    @Autowired
+    //@Autowired
     private TbItemDescMapper itemDescMapper;
 
-    @Test
+    //@Test
 public void testGetItemList() throws Exception { 
 //TODO: Test goes here...
 //

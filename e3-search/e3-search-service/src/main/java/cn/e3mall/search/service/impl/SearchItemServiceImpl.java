@@ -41,35 +41,7 @@ public class SearchItemServiceImpl implements SearchItemService {
 	 */
 	@Override
 	public E3Result importAllItems() {
-
-		System.out.println("成功");
-//		try {
-//			/**从数据库中查出数据*/
-//			List<SearchItem> itemList = itemMapper.getItemList();
-//
-//			/**遍历查出的数据，并将其添加到solr索引库中*/
-//			for (SearchItem searchItem : itemList) {
-//
-//				SolrInputDocument document = new SolrInputDocument();
-//
-//				document.addField("id", searchItem.getId());
-//				document.addField("item_title", searchItem.getTitle());
-//				document.addField("item_sell_point", searchItem.getSell_point());
-//				document.addField("item_price", searchItem.getPrice());
-//				document.addField("item_image", searchItem.getImage());
-//				document.addField("item_category_name", searchItem.getCategory_name());
-//
-//				solrServer.add(document);
-//				System.out.println("成功");
-//			}
-//			solrServer.commit();
-//			return E3Result.ok();
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//			System.out.println("失败");
-//			return E3Result.build(500, "数据导入时发生异常");
-//
-//		}
+		try {
 			/**从数据库中查出数据*/
 			List<SearchItem> itemList = itemMapper.getItemList();
 
@@ -84,25 +56,16 @@ public class SearchItemServiceImpl implements SearchItemService {
 				document.addField("item_price", searchItem.getPrice());
 				document.addField("item_image", searchItem.getImage());
 				document.addField("item_category_name", searchItem.getCategory_name());
-				try {
-					solrServer.add(document);
-				} catch (SolrServerException e) {
-					e.printStackTrace();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
-				System.out.println("成功");
-			}
-		try {
-			solrServer.commit();
-		} catch (SolrServerException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
 
-		System.out.println("成功");
-		return E3Result.ok();
+				solrServer.add(document);
+			}
+			solrServer.commit();
+			return E3Result.ok();
+		}catch (Exception e){
+			e.printStackTrace();
+			return E3Result.build(500, "商品导入失败");
+
+		}
 	}
 
 }

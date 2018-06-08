@@ -14,5 +14,4 @@ public interface ItemService {
 
 	E3Result addItem(TbItem item, String desc);
 
-    E3Result importAllItems();
 }

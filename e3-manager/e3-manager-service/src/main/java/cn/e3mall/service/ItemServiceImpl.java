@@ -38,10 +38,9 @@ public class ItemServiceImpl implements ItemService {
 
 	@Autowired
 	private TbItemMapper itemMapper;
-//	@Autowired
-//	private TbItemDescMapper itemDescMapper;
-//	@Autowired
-//	private SolrServer solrServer;
+	@Autowired
+	private TbItemDescMapper itemDescMapper;
+
 
 	/**
 	 * @Date 2017/12/17 18:52
@@ -120,44 +119,11 @@ public class ItemServiceImpl implements ItemService {
 		itemDesc.setItemDesc(desc);
 		itemDesc.setCreated(date);
 		itemDesc.setUpdated(date);
-//		itemDescMapper.insert(itemDesc);
+		itemDescMapper.insert(itemDesc);
 		return E3Result.ok();
 
 	}
 
-	@Override
-	public E3Result importAllItems() {
-//		try {
-//			/**从数据库中查出数据*/
-//			TbItemExample example =  new TbItemExample();
-//			List<TbItem> itemList = itemMapper.selectByExample(example);
-//
-//
-//			/**遍历查出的数据，并将其添加到solr索引库中*/
-//			for (TbItem tbItem : itemList) {
-//
-//				SolrInputDocument document = new SolrInputDocument();
-//
-//				document.addField("id", tbItem.getId());
-//				document.addField("item_title", tbItem.getTitle());
-//				document.addField("item_sell_point", "none");
-//				document.addField("item_price", tbItem.getPrice());
-//				document.addField("item_image", tbItem.getImage());
-//				document.addField("item_category_name", "none");
-//
-//				solrServer.add(document);
-//				System.out.println("成功");
-//			}
-//			solrServer.commit();
-//			return E3Result.ok();
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//			System.out.println("失败");
-//			return E3Result.build(500, "数据导入时发生异常");
-//
-//		}
-		return null;
-	}
 
 
 }

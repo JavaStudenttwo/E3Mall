@@ -2,6 +2,14 @@ package cn.e3mall.common.pojo;
 
 import java.io.Serializable;
 
+/**
+ * @Date 2018/6/4 22:53
+ * @Author CycloneKid sk18810356@gmail.com
+ * @PackageName: cn.e3mall.common.pojo
+ * @ClassName: SearchItem
+ * @Description: 为实现商品索引库添加，存储商品信息的持久化类
+ *
+ */
 public class SearchItem implements Serializable{
 	private String id;
 	private String title;
