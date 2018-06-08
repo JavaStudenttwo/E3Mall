@@ -8,9 +8,17 @@ import org.springframework.jms.core.MessageCreator;
 
 import javax.jms.*;
 
+/**
+ * @Date 2018/6/8 20:20
+ * @Author CycloneKid sk18810356@gmail.com
+ * @PackageName: cn.e3mall.activemq
+ * @ClassName: TestSpringActiveMQ
+ * @Description: Spring整合ActiveMQ测试
+ *
+ */
 public class TestSpringActiveMQ {
 
-    //@Test
+    @Test
     public void testSpringActiveMq() throws Exception {
         //初始化spring容器
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring/applicationContext-activemq.xml");

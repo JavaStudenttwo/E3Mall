@@ -14,12 +14,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
-/** 
-* ItemServiceImpl Tester. 
-* 
-* @author <Authors name> 
-* @version 1.0 
-*/ 
+/**
+ * @Date 2018/6/8 16:23
+ * @Author CycloneKid sk18810356@gmail.com
+ * @PackageName: cn.e3mall.service
+ * @ClassName: ItemServiceImplTest
+ * @Description:
+ *
+ */
 public class ItemServiceImplTest {
 
     //@Autowired
@@ -28,16 +30,12 @@ public class ItemServiceImplTest {
     private TbItemDescMapper itemDescMapper;
 
     //@Test
-public void testGetItemList() throws Exception { 
-//TODO: Test goes here...
-//
-//        TbItemExample example =  new TbItemExample();
-//        List<TbItem> list = itemMapper.selectByExample(example);
-//
-//
-//        System.out.println(list.get(1));
-//
+public void testGetItemList() throws Exception {
 
+        TbItemExample example =  new TbItemExample();
+        List<TbItem> list = itemMapper.selectByExample(example);
+
+        System.out.println(list.get(1));
 
 
 } 
