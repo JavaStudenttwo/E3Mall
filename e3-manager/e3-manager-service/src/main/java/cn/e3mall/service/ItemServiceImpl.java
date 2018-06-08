@@ -3,27 +3,35 @@ package cn.e3mall.service;
 import java.util.Date;
 import java.util.List;
 
-import cn.e3mall.common.pojo.SearchItem;
-import cn.e3mall.common.utils.E3Result;
-import cn.e3mall.common.utils.IDUtils;
-import cn.e3mall.mapper.TbItemDescMapper;
-import cn.e3mall.pojo.TbItemDesc;
-import org.apache.solr.client.solrj.SolrServer;
-import org.apache.solr.common.SolrInputDocument;
+import javax.annotation.Resource;
+import javax.jms.Destination;
+import javax.jms.JMSException;
+import javax.jms.Message;
+import javax.jms.Session;
+import javax.jms.TextMessage;
+
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.jms.core.JmsTemplate;
+import org.springframework.jms.core.MessageCreator;
 import org.springframework.stereotype.Service;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 
+import cn.e3mall.common.jedis.JedisClient;
 import cn.e3mall.common.pojo.EasyUIDataGridResult;
+import cn.e3mall.common.utils.E3Result;
+import cn.e3mall.common.utils.IDUtils;
+import cn.e3mall.common.utils.JsonUtils;
+import cn.e3mall.mapper.TbItemDescMapper;
 import cn.e3mall.mapper.TbItemMapper;
 import cn.e3mall.pojo.TbItem;
+import cn.e3mall.pojo.TbItemDesc;
 import cn.e3mall.pojo.TbItemExample;
 import cn.e3mall.pojo.TbItemExample.Criteria;
 import cn.e3mall.service.ItemService;
-
-import javax.annotation.Resource;
 
 /** 
  * @Date 2017/12/17 18:52
@@ -40,6 +48,10 @@ public class ItemServiceImpl implements ItemService {
 	private TbItemMapper itemMapper;
 	@Autowired
 	private TbItemDescMapper itemDescMapper;
+	@Autowired
+	private JmsTemplate jmsTemplate;
+	@Autowired
+	private Destination topicDestination;
 
 
 	/**
@@ -104,7 +116,7 @@ public class ItemServiceImpl implements ItemService {
 	@Override
 	public E3Result addItem(TbItem item, String desc) {
 		/**商品信息初始化*/
-		long itemId = IDUtils.getItemId();
+		final long itemId = IDUtils.getItemId();
 		item.setId(itemId);
 		/**商品状态：1.正常 2.下架 3.删除*/
 		item.setStatus((byte) 1);
@@ -120,6 +132,17 @@ public class ItemServiceImpl implements ItemService {
 		itemDesc.setCreated(date);
 		itemDesc.setUpdated(date);
 		itemDescMapper.insert(itemDesc);
+
+		/**添加商品后给search工程发送消息*/
+		jmsTemplate.send(topicDestination, new MessageCreator() {
+
+			@Override
+			public Message createMessage(Session session) throws JMSException {
+				TextMessage textMessage = session.createTextMessage(itemId + "");
+				return textMessage;
+			}
+		});
+
 		return E3Result.ok();
 
 	}

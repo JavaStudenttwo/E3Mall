@@ -15,4 +15,22 @@
 		WHERE
 			a.`status` = 1
 	</select>
+
+	<select id="getItemById" parameterType="long" resultType="cn.e3mall.common.pojo.SearchItem">
+		SELECT
+			a.id,
+			a.title,
+			a.sell_point,
+			a.price,
+			a.image,
+			b. NAME category_name,
+			c.item_desc
+		FROM
+			tb_item a
+		JOIN tb_item_cat b ON a.cid = b.id
+		JOIN tb_item_desc c ON a.id = c.item_id
+		WHERE a.status = 1
+		AND a.id=#{itemId}
+	</select>
+
 </mapper>

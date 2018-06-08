@@ -68,4 +68,32 @@ public class SearchItemServiceImpl implements SearchItemService {
 		}
 	}
 
+	/**
+	 * @Date 2018/6/8 21:41
+	 * @Author CycloneKid sk18810356@gmail.com
+	 * @MethodName: addDocument
+	 * @Params: [itemId]
+	 * @ReturnType: cn.e3mall.common.utils.E3Result
+	 * @Description:
+	 *
+	 */
+	public E3Result addDocument(long itemId) throws Exception {
+
+		SearchItem searchItem = itemMapper.getItemById(itemId);
+		SolrInputDocument document = new SolrInputDocument();
+
+		document.addField("id", searchItem.getId());
+		document.addField("item_title", searchItem.getTitle());
+		document.addField("item_sell_point", searchItem.getSell_point());
+		document.addField("item_price", searchItem.getPrice());
+		document.addField("item_image", searchItem.getImage());
+		document.addField("item_category_name", searchItem.getCategory_name());
+		document.addField("item_desc", searchItem.getItem_desc());
+
+		solrServer.add(document);
+		solrServer.commit();
+
+		return E3Result.ok();
+	}
+
 }

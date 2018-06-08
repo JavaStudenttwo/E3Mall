@@ -48,6 +48,14 @@
 		<property name="messageListener" ref="myMessageListener" />
 	</bean>
 
+	<bean id="itemChangeListener" class="cn.e3mall.search.listener.ItemChangeListener"/>
+	<!-- 商品添加消息监听器 -->
+	<bean class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+		<property name="connectionFactory" ref="connectionFactory" />
+		<property name="destination" ref="topicDestination" />
+		<property name="messageListener" ref="itemChangeListener" />
+	</bean>
+
 
 
 </beans>
