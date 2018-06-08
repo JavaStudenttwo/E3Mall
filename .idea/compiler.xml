@@ -9,6 +9,7 @@
         <module name="e3-common" />
         <module name="e3-content-interface" />
         <module name="e3-content-service" />
+        <module name="e3-item-web" />
         <module name="e3-manager-dao" />
         <module name="e3-manager-interface" />
         <module name="e3-manager-pojo" />
@@ -30,6 +31,7 @@
       <module name="e3-gateway-interface" target="1.7" />
       <module name="e3-gateway-service" target="1.7" />
       <module name="e3-gateway-web" target="1.7" />
+      <module name="e3-item-web" target="1.7" />
       <module name="e3-manager" target="1.7" />
       <module name="e3-manager-dao" target="1.7" />
       <module name="e3-manager-interface" target="1.7" />

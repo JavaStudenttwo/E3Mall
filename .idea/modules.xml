@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/e3-content/e3-content.iml" filepath="$PROJECT_DIR$/e3-content/e3-content.iml" />
       <module fileurl="file://$PROJECT_DIR$/e3-content/e3-content-interface/e3-content-interface.iml" filepath="$PROJECT_DIR$/e3-content/e3-content-interface/e3-content-interface.iml" />
       <module fileurl="file://$PROJECT_DIR$/e3-content/e3-content-service/e3-content-service.iml" filepath="$PROJECT_DIR$/e3-content/e3-content-service/e3-content-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/e3-item-web/e3-item-web.iml" filepath="$PROJECT_DIR$/e3-item-web/e3-item-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/e3-manager/e3-manager.iml" filepath="$PROJECT_DIR$/e3-manager/e3-manager.iml" />
       <module fileurl="file://$PROJECT_DIR$/e3-manager/e3-manager-dao/e3-manager-dao.iml" filepath="$PROJECT_DIR$/e3-manager/e3-manager-dao/e3-manager-dao.iml" />
       <module fileurl="file://$PROJECT_DIR$/e3-manager/e3-manager-interface/e3-manager-interface.iml" filepath="$PROJECT_DIR$/e3-manager/e3-manager-interface/e3-manager-interface.iml" />
