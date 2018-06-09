@@ -2,6 +2,14 @@ package cn.e3mall.common.jedis;
 
 import java.util.List;
 
+/** 
+ * @Date 2018/6/9 9:17
+ * @Author CycloneKid sk18810356@gmail.com 
+ * @PackageName: cn.e3mall.common.jedis
+ * @ClassName: JedisClient 
+ * @Description: 
+ *
+ */
 public interface JedisClient {
 
 	String set(String key, String value);

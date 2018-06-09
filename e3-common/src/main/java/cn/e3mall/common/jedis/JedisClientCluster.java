@@ -4,10 +4,17 @@ import java.util.List;
 
 import redis.clients.jedis.JedisCluster;
 
+/**
+ * @Date 2018/6/9 8:48
+ * @Author CycloneKid sk18810356@gmail.com
+ * @PackageName: cn.e3mall.common.jedis
+ * @ClassName: JedisClientCluster
+ * @Description: Redis集群连接
+ *
+ */
 public class JedisClientCluster implements JedisClient {
 	
 	private JedisCluster jedisCluster;
-	
 
 	public JedisCluster getJedisCluster() {
 		return jedisCluster;

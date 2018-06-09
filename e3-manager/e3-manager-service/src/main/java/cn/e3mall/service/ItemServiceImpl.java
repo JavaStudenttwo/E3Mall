@@ -11,6 +11,7 @@ import javax.jms.Session;
 import javax.jms.TextMessage;
 
 import cn.e3mall.common.jedis.JedisClient;
+import com.sun.imageio.plugins.common.I18N;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -54,13 +55,8 @@ public class ItemServiceImpl implements ItemService {
 	@Autowired
 	private JedisClient jedisClient;
 
-	@Value("${REDIS_ITEM_PRE}")
-	private String REDIS_ITEM_PRE;
-	@Value("${ITEM_CACHE_EXPIRE}")
-	private Integer ITEM_CACHE_EXPIRE;
-
 	@Value("${ITEM_INFO_PRE}")
-	private Integer ITEM_INFO_PRE;
+	private String ITEM_INFO_PRE;
 	@Value("${ITEM_INFO_EXPIRE}")
 	private Integer ITEM_INFO_EXPIRE;
 

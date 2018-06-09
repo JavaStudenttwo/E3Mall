@@ -5,6 +5,14 @@ import java.util.List;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 
+/**
+ * @Date 2018/6/9 8:48
+ * @Author CycloneKid sk18810356@gmail.com
+ * @PackageName: cn.e3mall.common.jedis
+ * @ClassName: JedisClientPool
+ * @Description: Redis单机连接
+ *
+ */
 public class JedisClientPool implements JedisClient {
 	
 	private JedisPool jedisPool;
