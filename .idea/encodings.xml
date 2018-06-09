@@ -18,5 +18,7 @@
     <file url="file://$PROJECT_DIR$/e3-search-web" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/e3-search/e3-search-interface" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/e3-search/e3-search-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/e3-sso" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/e3-sso-web" charset="UTF-8" />
   </component>
 </project>

@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="e3-sso-service:war exploded">
+    <output-path>$PROJECT_DIR$/e3-sso/e3-sso-service/target/e3-sso-service-1.0-SNAPSHOT</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="e3-sso-service" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/e3-sso/e3-sso-service/target/e3-sso-service-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="e3-sso-service/web/Web" />
+    </root>
+  </artifact>
+</component>

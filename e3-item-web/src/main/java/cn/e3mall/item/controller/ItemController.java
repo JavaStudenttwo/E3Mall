@@ -39,10 +39,10 @@ public class ItemController {
         TbItem tbItem = itemService.getItemById(itemId);
         Item item = new Item(tbItem);
 
-        TbItemDesc tbItemDesc = itemService.getItemDescById(itemId);
-
-        model.addAttribute("item", item);
-        model.addAttribute("itemDesc", tbItemDesc);
+//        TbItemDesc tbItemDesc = itemService.getItemDescById(itemId);
+//
+//        model.addAttribute("item", item);
+//        model.addAttribute("itemDesc", tbItemDesc);
 
         return "item";
     }

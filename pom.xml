@@ -18,6 +18,8 @@
         <module>e3-search</module>
         <module>e3-search-web</module>
         <module>e3-item-web</module>
+        <module>e3-sso</module>
+        <module>e3-sso-web</module>
     </modules>
 
     <properties>
