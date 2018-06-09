@@ -54,8 +54,8 @@
       <module name="e3-search-service" target="1.7" />
       <module name="e3-search-web" target="1.7" />
       <module name="e3-sso" target="1.7" />
-      <module name="e3-sso-interface" target="1.5" />
-      <module name="e3-sso-service" target="1.5" />
+      <module name="e3-sso-interface" target="1.7" />
+      <module name="e3-sso-service" target="1.7" />
       <module name="e3-sso-service (1)" target="1.5" />
       <module name="e3-sso-web" target="1.7" />
     </bytecodeTargetLevel>
