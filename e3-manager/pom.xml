@@ -18,15 +18,6 @@
         <module>e3-manager-service</module>
     </modules>
 
-    <dependencies>
-        <dependency>
-            <groupId>cn.e3mall</groupId>
-            <artifactId>e3-common</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-    </dependencies>
-
-
     <build>
         <plugins>
             <plugin>

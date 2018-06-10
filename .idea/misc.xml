@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/e3-cart-web" />
     <file type="web" url="file://$PROJECT_DIR$/e3-content/e3-content-service" />
     <file type="web" url="file://$PROJECT_DIR$/e3-gateway-web" />
     <file type="web" url="file://$PROJECT_DIR$/e3-gateway/e3-gateway-service" />
     <file type="web" url="file://$PROJECT_DIR$/e3-item-web" />
     <file type="web" url="file://$PROJECT_DIR$/e3-manager-web" />
     <file type="web" url="file://$PROJECT_DIR$/e3-manager/e3-manager-service" />
+    <file type="web" url="file://$PROJECT_DIR$/e3-order-web" />
+    <file type="web" url="file://$PROJECT_DIR$/e3-order/e3-order-interface" />
+    <file type="web" url="file://$PROJECT_DIR$/e3-order/e3-order-service" />
     <file type="web" url="file://$PROJECT_DIR$/e3-portal-web" />
     <file type="web" url="file://$PROJECT_DIR$/e3-portal/e3-portal-service" />
     <file type="web" url="file://$PROJECT_DIR$/e3-search-web" />

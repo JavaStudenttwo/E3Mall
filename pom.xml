@@ -20,6 +20,9 @@
         <module>e3-item-web</module>
         <module>e3-sso</module>
         <module>e3-sso-web</module>
+        <module>e3-cart-web</module>
+        <module>e3-order</module>
+        <module>e3-order-web</module>
     </modules>
 
     <properties>

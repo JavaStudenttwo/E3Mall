@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="e3-order-service:war">
+    <output-path>$PROJECT_DIR$/e3-order/e3-order-service/target</output-path>
+    <root id="archive" name="e3-order-service.war">
+      <element id="artifact" artifact-name="e3-order-service:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/e3-cart-web" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/e3-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/e3-content" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/e3-content/e3-content-interface" charset="UTF-8" />
@@ -13,6 +14,10 @@
     <file url="file://$PROJECT_DIR$/e3-manager/e3-manager-interface" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/e3-manager/e3-manager-pojo" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/e3-manager/e3-manager-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/e3-order" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/e3-order-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/e3-order/e3-order-interface" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/e3-order/e3-order-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/e3-portal-web" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/e3-search" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/e3-search-web" charset="UTF-8" />

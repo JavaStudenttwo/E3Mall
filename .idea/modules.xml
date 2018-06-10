@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/e3-cart-web/e3-cart-web.iml" filepath="$PROJECT_DIR$/e3-cart-web/e3-cart-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/e3-common/e3-common.iml" filepath="$PROJECT_DIR$/e3-common/e3-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/e3-content/e3-content.iml" filepath="$PROJECT_DIR$/e3-content/e3-content.iml" />
       <module fileurl="file://$PROJECT_DIR$/e3-content/e3-content-interface/e3-content-interface.iml" filepath="$PROJECT_DIR$/e3-content/e3-content-interface/e3-content-interface.iml" />
@@ -13,6 +14,10 @@
       <module fileurl="file://$PROJECT_DIR$/e3-manager/e3-manager-pojo/e3-manager-pojo.iml" filepath="$PROJECT_DIR$/e3-manager/e3-manager-pojo/e3-manager-pojo.iml" />
       <module fileurl="file://$PROJECT_DIR$/e3-manager/e3-manager-service/e3-manager-service.iml" filepath="$PROJECT_DIR$/e3-manager/e3-manager-service/e3-manager-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/e3-manager-web/e3-manager-web.iml" filepath="$PROJECT_DIR$/e3-manager-web/e3-manager-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/e3-order/e3-order.iml" filepath="$PROJECT_DIR$/e3-order/e3-order.iml" />
+      <module fileurl="file://$PROJECT_DIR$/e3-order/e3-order-interface/e3-order-interface.iml" filepath="$PROJECT_DIR$/e3-order/e3-order-interface/e3-order-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/e3-order/e3-order-service/e3-order-service.iml" filepath="$PROJECT_DIR$/e3-order/e3-order-service/e3-order-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/e3-order-web/e3-order-web.iml" filepath="$PROJECT_DIR$/e3-order-web/e3-order-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/e3-parent.iml" filepath="$PROJECT_DIR$/e3-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/e3-portal-web/e3-portal-web.iml" filepath="$PROJECT_DIR$/e3-portal-web/e3-portal-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/e3-search/e3-search.iml" filepath="$PROJECT_DIR$/e3-search/e3-search.iml" />
