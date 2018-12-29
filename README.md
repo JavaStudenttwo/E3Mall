@@ -40,4 +40,7 @@
 ## 3.商品搜索
 根据关键字搜索并展示商品
 先由e3-search子项目使用Solr框架，完成对所有商品的信息提取，建立一个Solr索引库，然后由e3-search-web子项目根据关键字查询相关数据并展示商品详情页面
+商品搜索：
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20181228225325823.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2VhZ2xldW5pdmVyc2l0eWV5ZQ==,size_16,color_FFFFFF,t_70)
+Solr索引库：
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20181229092636516.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2VhZ2xldW5pdmVyc2l0eWV5ZQ==,size_16,color_FFFFFF,t_70)
